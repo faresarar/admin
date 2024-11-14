@@ -75,22 +75,6 @@ class _OrdersWidgetFreeState extends State<OrdersWidgetFree> {
                     label: "Qty: 10",
                     fontSize: 15,
                   ),
-                  // const Row(
-                  //   children: [
-                  //     Flexible(
-                  //       child: TitlesTextWidget(
-                  //         label: 'Qty:  ',
-                  //         fontSize: 15,
-                  //       ),
-                  //     ),
-                  //     Flexible(
-                  //       child: SubtitleTextWidget(
-                  //         label: "10",
-                  //         fontSize: 15,
-                  //       ),
-                  //     ),
-                  //   ],
-                  // ),
                   const SizedBox(
                     height: 5,
                   ),

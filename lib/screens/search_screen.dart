@@ -35,8 +35,7 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     final productProvider = Provider.of<ProductProvider>(context);
 
-    String? passedCategory =
-        ModalRoute.of(context)!.settings.arguments as String?;
+    String? passedCategory = ModalRoute.of(context)!.settings.arguments as String?;
 
     final List<ProductModel> productList = passedCategory == null
         ? productProvider.getProducts
@@ -48,10 +47,6 @@ class _SearchScreenState extends State<SearchScreen> {
       child: Scaffold(
           appBar: AppBar(
             title: TitlesTextWidget(label: passedCategory ?? "Search"),
-            // leading: Padding(
-            //   padding: const EdgeInsets.all(8.0),
-            //   child: Image.asset(AssetsManager.shoppingCart),
-            // ),
           ),
           body: StreamBuilder<List<ProductModel>>(
               stream: productProvider.fetchProductsStream(),

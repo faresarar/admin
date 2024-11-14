@@ -55,6 +55,11 @@ dependencies:
   firebase_core: ^2.14.0
   cloud_firestore: ^4.8.1
   firebase_storage: ^11.2.3
+  contactus: ^1.2.3
+  dio: ^5.4.3+1
+  flutter_dotenv: ^5.1.0
+  firebase_messaging: ^14.7.15
+  flutter_local_notifications: ^17.1.2
 
 dev_dependencies:
   flutter_test:
@@ -79,8 +84,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - .env.dev
+    - .env.prod
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

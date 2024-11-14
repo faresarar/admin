@@ -20,7 +20,6 @@ class ProductWidget extends StatefulWidget {
 class _ProductWidgetState extends State<ProductWidget> {
   @override
   Widget build(BuildContext context) {
-    // final productModelProvider = Provider.of<ProductModel>(context);
     final productProvider = Provider.of<ProductProvider>(context);
     final getCurrProduct = productProvider.findByProdId(widget.productId);
     Size size = MediaQuery.of(context).size;
@@ -31,11 +30,13 @@ class _ProductWidgetState extends State<ProductWidget> {
             child: GestureDetector(
               onTap: () async {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => EditOrUploadProductScreen(
-                              productModel: getCurrProduct,
-                            )));
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => EditOrUploadProductScreen(
+                      productModel: getCurrProduct,
+                    ),
+                  ),
+                );
               },
               child: Column(
                 children: [

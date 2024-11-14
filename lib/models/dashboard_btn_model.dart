@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../get_all_notification.dart';
+import '../screens/admin_message_screen.dart';
 import '../screens/edit_upload_product_form.dart';
 import '../screens/inner_screens/orders/orders_screen.dart';
 import '../screens/search_screen.dart';
@@ -45,5 +47,21 @@ class DashboardButtonsModel {
             );
           },
         ),
+        DashboardButtonsModel(
+          text: "Message",
+          imagePath: AssetsManager.cloud,
+          onPressed: () {
+            Navigator.pushNamed(
+              context,
+              AdminMessageScreen.routeName,
+            );
+          },
+        ),
+        DashboardButtonsModel(
+            text: "All Notifications",
+            imagePath: AssetsManager.cosmetics,
+            onPressed: () {
+              Navigator.popAndPushNamed(context, GetAllNotification.routeName);
+            })
       ];
 }
